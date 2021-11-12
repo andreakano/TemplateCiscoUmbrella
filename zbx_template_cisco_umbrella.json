@@ -1,0 +1,66 @@
+{
+    "zabbix_export": {
+        "version": "5.4",
+        "date": "2021-11-12T13:42:32Z",
+        "groups": [
+            {
+                "uuid": "f9579db6233e44d0ab8e263b2cd97d59",
+                "name": "Firewall"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "a113c163132d4c14af12869edb376488",
+                "template": "Cisco Umbrella Virtual Appliance",
+                "name": "Cisco Umbrella Virtual Appliance",
+                "groups": [
+                    {
+                        "name": "Firewall"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "052444b461434651879091db9f345a91",
+                        "name": "CPU Load (1 min)",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.2021.10.1.3.1",
+                        "key": "laLoad",
+                        "value_type": "FLOAT"
+                    },
+                    {
+                        "uuid": "2f257a4215c44448acc160ec463dda46",
+                        "name": "Available Swap",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.2021.4.4.0",
+                        "key": "memAvailSwap",
+                        "value_type": "FLOAT"
+                    },
+                    {
+                        "uuid": "f89e8b58ab20423d97346b9908de59da",
+                        "name": "Total Swap Memory",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.2021.4.3.0",
+                        "key": "memTotalSwap",
+                        "value_type": "FLOAT"
+                    },
+                    {
+                        "uuid": "3cd486ded40e4815b78328dba0919d24",
+                        "name": "CPU Idle",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.2021.11.11.0",
+                        "key": "ssCpuIdle",
+                        "units": "%"
+                    },
+                    {
+                        "uuid": "af7090d1e72c46ab99f948d09e35875b",
+                        "name": "System CPU",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.2021.11.10.0",
+                        "key": "ssCpuSystem",
+                        "units": "%"
+                    }
+                ]
+            }
+        ]
+    }
+}

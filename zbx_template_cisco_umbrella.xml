@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.4</version>
+    <date>2021-11-12T13:42:31Z</date>
+    <groups>
+        <group>
+            <uuid>f9579db6233e44d0ab8e263b2cd97d59</uuid>
+            <name>Firewall</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <uuid>a113c163132d4c14af12869edb376488</uuid>
+            <template>Cisco Umbrella Virtual Appliance</template>
+            <name>Cisco Umbrella Virtual Appliance</name>
+            <groups>
+                <group>
+                    <name>Firewall</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>052444b461434651879091db9f345a91</uuid>
+                    <name>CPU Load (1 min)</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.10.1.3.1</snmp_oid>
+                    <key>laLoad</key>
+                    <value_type>FLOAT</value_type>
+                </item>
+                <item>
+                    <uuid>2f257a4215c44448acc160ec463dda46</uuid>
+                    <name>Available Swap</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.4.4.0</snmp_oid>
+                    <key>memAvailSwap</key>
+                    <value_type>FLOAT</value_type>
+                </item>
+                <item>
+                    <uuid>f89e8b58ab20423d97346b9908de59da</uuid>
+                    <name>Total Swap Memory</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.4.3.0</snmp_oid>
+                    <key>memTotalSwap</key>
+                    <value_type>FLOAT</value_type>
+                </item>
+                <item>
+                    <uuid>3cd486ded40e4815b78328dba0919d24</uuid>
+                    <name>CPU Idle</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.11.11.0</snmp_oid>
+                    <key>ssCpuIdle</key>
+                    <units>%</units>
+                </item>
+                <item>
+                    <uuid>af7090d1e72c46ab99f948d09e35875b</uuid>
+                    <name>System CPU</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.11.10.0</snmp_oid>
+                    <key>ssCpuSystem</key>
+                    <units>%</units>
+                </item>
+            </items>
+        </template>
+    </templates>
+</zabbix_export>
