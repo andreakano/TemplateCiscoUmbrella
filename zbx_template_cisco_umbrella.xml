@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.4</version>
-    <date>2021-11-12T13:42:31Z</date>
+    <date>2021-11-14T11:48:32Z</date>
     <groups>
         <group>
             <uuid>f9579db6233e44d0ab8e263b2cd97d59</uuid>
@@ -44,6 +44,15 @@
                     <value_type>FLOAT</value_type>
                 </item>
                 <item>
+                    <uuid>1509651bda9b40e6af96880e198b9893</uuid>
+                    <name>% Swap Memory Available</name>
+                    <type>CALCULATED</type>
+                    <key>percentage.swap.available</key>
+                    <value_type>FLOAT</value_type>
+                    <units>%</units>
+                    <params>100*last(/Cisco Umbrella VA/memAvailSwap)/last(/Cisco Umbrella VA/memTotalSwap)</params>
+                </item>
+                <item>
                     <uuid>3cd486ded40e4815b78328dba0919d24</uuid>
                     <name>CPU Idle</name>
                     <type>SNMP_AGENT</type>
@@ -58,6 +67,15 @@
                     <snmp_oid>.1.3.6.1.4.1.2021.11.10.0</snmp_oid>
                     <key>ssCpuSystem</key>
                     <units>%</units>
+                </item>
+                <item>
+                    <uuid>ad74f80b31fa4b44a335213fbdecf544</uuid>
+                    <name>DNS Resolvers</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.8072.1.3.2.4.1.2.3.100.110.115.1</snmp_oid>
+                    <key>umbrella.resolver</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
                 </item>
             </items>
         </template>

@@ -1,7 +1,7 @@
 {
     "zabbix_export": {
         "version": "5.4",
-        "date": "2021-11-12T13:42:32Z",
+        "date": "2021-11-14T11:48:34Z",
         "groups": [
             {
                 "uuid": "f9579db6233e44d0ab8e263b2cd97d59",
@@ -44,6 +44,15 @@
                         "value_type": "FLOAT"
                     },
                     {
+                        "uuid": "1509651bda9b40e6af96880e198b9893",
+                        "name": "% Swap Memory Available",
+                        "type": "CALCULATED",
+                        "key": "percentage.swap.available",
+                        "value_type": "FLOAT",
+                        "units": "%",
+                        "params": "100*last(/Cisco Umbrella VA/memAvailSwap)/last(/Cisco Umbrella VA/memTotalSwap)"
+                    },
+                    {
                         "uuid": "3cd486ded40e4815b78328dba0919d24",
                         "name": "CPU Idle",
                         "type": "SNMP_AGENT",
@@ -58,6 +67,15 @@
                         "snmp_oid": ".1.3.6.1.4.1.2021.11.10.0",
                         "key": "ssCpuSystem",
                         "units": "%"
+                    },
+                    {
+                        "uuid": "ad74f80b31fa4b44a335213fbdecf544",
+                        "name": "DNS Resolvers",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8072.1.3.2.4.1.2.3.100.110.115.1",
+                        "key": "umbrella.resolver",
+                        "trends": "0",
+                        "value_type": "TEXT"
                     }
                 ]
             }
