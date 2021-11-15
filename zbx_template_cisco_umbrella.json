@@ -1,7 +1,7 @@
 {
     "zabbix_export": {
         "version": "5.4",
-        "date": "2021-11-14T11:48:34Z",
+        "date": "2021-11-15T22:33:25Z",
         "groups": [
             {
                 "uuid": "f9579db6233e44d0ab8e263b2cd97d59",
@@ -28,6 +28,15 @@
                         "value_type": "FLOAT"
                     },
                     {
+                        "uuid": "546a1e08c85842d9b35acbbf973bd055",
+                        "name": "Local DNS Servers",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8072.1.3.2.4.1.2.8.108.111.99.97.108.100.110.115.1",
+                        "key": "localDNSServers",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
                         "uuid": "2f257a4215c44448acc160ec463dda46",
                         "name": "Available Swap",
                         "type": "SNMP_AGENT",
@@ -50,7 +59,7 @@
                         "key": "percentage.swap.available",
                         "value_type": "FLOAT",
                         "units": "%",
-                        "params": "100*last(/Cisco Umbrella VA/memAvailSwap)/last(/Cisco Umbrella VA/memTotalSwap)"
+                        "params": "100*(last(/Cisco Umbrella VA/memAvailSwap)/last(/Cisco Umbrella VA/memTotalSwap))"
                     },
                     {
                         "uuid": "3cd486ded40e4815b78328dba0919d24",
@@ -69,8 +78,17 @@
                         "units": "%"
                     },
                     {
+                        "uuid": "07a243e015df45c595026dd28c270f5c",
+                        "name": "Umbrella Dashboard",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.8072.1.3.2.4.1.2.5.99.108.111.117.100.1",
+                        "key": "umbrella.dashboard",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
                         "uuid": "ad74f80b31fa4b44a335213fbdecf544",
-                        "name": "DNS Resolvers",
+                        "name": "Umbrella Resolvers",
                         "type": "SNMP_AGENT",
                         "snmp_oid": ".1.3.6.1.4.1.8072.1.3.2.4.1.2.3.100.110.115.1",
                         "key": "umbrella.resolver",
